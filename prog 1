@@ -1,0 +1,11 @@
+a=int(input())
+b=int(input())
+c=int(input())
+sum=a+b+c
+print("SUM=",sum)
+
+
+output-
+3
+5
+7
