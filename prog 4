@@ -1,0 +1,12 @@
+a=int(input())
+print("current:",a)
+print("previous:",a-1)
+print("next:",a+1)
+
+
+
+output
+10
+10
+9
+11
