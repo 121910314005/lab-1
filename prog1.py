@@ -1,3 +1,4 @@
+Date:27/08/2020
 n1=int(input("Enter the first number:"))
 n2=int(input("Enter the second number:"))
 n3=int(input("Enter the third number:"))
