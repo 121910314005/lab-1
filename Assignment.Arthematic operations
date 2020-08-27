@@ -1,0 +1,17 @@
+a=int(input())
+b=int(input())
+sum = a+b
+sub = a-b
+mul = a*b
+div = a/b
+mod = a%b
+print("Sum =",sum, "\n Sub =", sub, "\n Mul =",mul, "\n Div =",div, "\n Mod=",mod)
+
+output
+10
+5
+Sum = 15 
+ Sub = 5 
+ Mul = 50 
+ Div = 2.0 
+ Mod= 0
