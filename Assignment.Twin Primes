@@ -1,0 +1,26 @@
+print("enter the lower and upper limit : ")
+a = int(input())
+b = int(input())
+print("twin primes are : ")
+def prime(n):
+    for i in range(2,n):
+        if n%i == 0 :
+            return False
+    else :
+        return True
+def twin(x,y):
+    for i in range(x,y):
+        if i>1:
+            k = i+2
+            if prime(i) and prime(k):
+                print(str(i)+" and "+str(k))
+twin(a,b)
+
+Output:
+
+enter the lower and upper limit : 
+1
+10
+twin primes are : 
+3 and 5
+5 and 7
