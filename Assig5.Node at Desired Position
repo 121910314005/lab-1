@@ -1,0 +1,83 @@
+class Node:    
+  def _init_(self,data):    
+    self.data = data;    
+    self.next = None;         
+class CreateList:        
+    def _init_(self):    
+      self.head = Node(None);    
+      self.tail = Node(None);    
+      self.head.next = self.tail;    
+      self.tail.next = self.head;    
+      self.size = 0;    
+    def add(self,data):    
+       newNode = Node(data);        
+       if self.head.data is None:        
+         self.head = newNode;    
+         self.tail = newNode;    
+         newNode.next = self.head;    
+       else:        
+         self.tail.next = newNode;        
+         self.tail = newNode;        
+         self.tail.next = self.head;        
+       self.size = self.size+1;        
+    def addInMid(self,data):    
+        newNode = Node(data);        
+        if(self.head == None):        
+            self.head = newNode;    
+            self.tail = newNode;    
+            newNode.next = self.head;    
+        else:        
+            count = (self.size//2) if (self.size % 2 == 0) else ((self.size+1)//2);        
+            temp = self.head;    
+            for i in range(0,count):        
+                current = temp;        
+                temp = temp.next;        
+            current.next = newNode;        
+            newNode.next = temp;    
+        self.size = self.size+1;       
+    def display(self):    
+      current = self.head;    
+      if self.head is None:    
+        print("List is empty");    
+        return;    
+      else:        
+          print(current.data),    
+          while(current.next != self.head):    
+              current = current.next;    
+              print(current.data),    
+class CircularLinkedList:    
+    cl = CreateList();       
+    cl.add(1);    
+    cl.add(2);    
+    cl.add(3);    
+    cl.add(4);    
+    print("Original list: ");    
+    cl.display();        
+    cl.addInMid(5);    
+    print("\nUpdated List: ");    
+    cl.display();        
+    cl.addInMid(6);    
+    print("\nUpdated List: ");    
+    cl.display();
+    
+OUTPUT:
+Original list: 
+1
+2
+3
+4
+
+Updated List: 
+1
+2
+5
+3
+4
+
+Updated List: 
+1
+2
+5
+6
+3
+4
