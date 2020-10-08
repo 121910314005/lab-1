@@ -1,0 +1,55 @@
+#delete the node from the linked list with given key   
+class Node:   
+    def _init_(self, data):  
+        self.data = data  
+        self.next = None
+class LinkedList:    
+    def _init_(self):  
+        self.head = None  
+    def push(self, new_data):  
+        new_node = Node(new_data)  
+        new_node.next = self.head  
+        self.head = new_node    
+    def deleteNode(self, key):    
+        temp = self.head   
+        if (temp is not None):  
+            if (temp.data == key):  
+                self.head = temp.next
+                temp = None
+                return  
+        while(temp is not None):  
+            if temp.data == key:  
+                break
+            prev = temp  
+            temp = temp.next  
+        if(temp == None):  
+            return 
+        prev.next = temp.next
+        temp = None  
+    def printList(self):  
+        temp = self.head  
+        while(temp):  
+            print (" %d" %(temp.data)),  
+            temp = temp.next  
+llist = LinkedList()  
+llist.push(4)  
+llist.push(3)  
+llist.push(2)  
+llist.push(1)    
+print ("Created Linked List: ") 
+llist.printList()
+n = int(input("enter the number that you want to delete : "))
+llist.deleteNode(n)  
+print ("Linked List after Deletion of the given node:")  
+llist.printList()
+OUTPUT:
+Created Linked List:
+1
+2
+3
+4
+enter the number that you want to delete:3
+Linked List after deletion of the given node
+1
+2
+4
