@@ -1,0 +1,17 @@
+a = []
+n = int(input("enter the size of the array: "))
+print("enter "+str(n)+" numbers : ")
+for i in range(n):
+    b = int(input())
+    a.append(b)
+a.sort()
+print("the smallest element is "+str(a[1]))
+
+OUTPUT:
+enter the size of the array: 4
+enter 4 numbers : 
+2
+3
+5
+6
+the smallest element is 3
