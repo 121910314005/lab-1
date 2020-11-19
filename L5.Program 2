@@ -1,0 +1,18 @@
+#implementation of linear search
+a = [1,3,2,4,9,55,44,33,6,54]
+print(a)
+x = 0
+loc = 0
+n = int(input("enter a number to search : "))
+for i in range(len(a)):
+    if a[i] == n:
+        x = 1
+        loc = i
+if x == 1:
+    print(str(n)+" is found at ",loc)
+else:
+    print(str(n)+" is not found!!!!")
+Output:
+[1, 3, 2, 4, 9, 55, 44, 33, 6, 54]
+enter a number to search : 33
+33 is found at  7
