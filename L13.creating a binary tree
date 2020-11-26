@@ -1,0 +1,13 @@
+class Node:
+    def __init__(self,n):
+        self.left = None
+        self.right = None
+        self.n = n
+    def PrintbinaryTree(self):
+        print(self.n)
+root = Node(1)
+print("printing the binary tree: ")
+root.PrintbinaryTree()
+OUTPUT:
+printing the binary tree: 
+1
